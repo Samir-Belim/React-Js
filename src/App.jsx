@@ -7,13 +7,15 @@ import { movies } from './components/data'
 import Meal from './components/Meal/Meal'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from './components/Pages/Home'
-import Courses from './components/Pages/Courses'
+{/*import Courses from './components/Pages/Courses'
 import Services from './components/Pages/Services'
 import Profile from './components/Pages/Profile'
 import Dashboard from './components/Pages/Dashboard'
 import Contact from './components/Pages/Contact'
 import About from './components/Pages/About'
-
+*/}
+import User from './components/Router/User'
+import Loc from './components/Router/Loc'
 const App = () => {
   return (
     <>
@@ -40,7 +42,7 @@ const App = () => {
         {/*  <Meal></Meal>*/}
       </div>
 
-      <div>
+    { /* <div>
         <Router>
           <Routes>
             <Route path="/" element={<Home/>}/>
@@ -53,9 +55,35 @@ const App = () => {
            </Routes>
          </Router>
        
+      </div>*/}
+
+      <div>
+      <Router>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/user/:id" element={<User/>}/> 
+            
+           </Routes>
+     </Router>
+     
       </div>
        </>
      );
 }
 
                   export default App
+                  const users={
+                    user1:{
+                     id:1,
+                     name:'abc',
+                     gender:true},
+                     user2:{
+                         id:2,
+                         name:'dbc',
+                         gender:true},
+                         user3:{
+                             id:3,
+                             name:'xyz',
+                             gender:true},
+             
+                 }
